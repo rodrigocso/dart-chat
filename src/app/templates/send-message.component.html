@@ -1,0 +1,14 @@
+﻿<div id="msgs-form" class="row">
+  <form action="#">
+    <div class="form-group col-xs-12 msgs-form">
+      <textarea #msgBox (keyup)="onKeyup($event)" [disabled]="!user" class="text-input form-control" rows="1" placeholder="Send a message..."></textarea>
+      <div class="pull-right">
+        <button [disabled]="!user" (click)="msgBox.value && sendMessage(msgBox)" class="btn btn-default" type="submit">
+          <span class="glyphicon glyphicon-send"></span>
+        </button>
+        <!-- Send Image Component -->
+        <dart-send-img></dart-send-img>
+      </div>
+    </div>
+  </form>
+</div>

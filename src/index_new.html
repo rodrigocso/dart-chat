@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>dart chat</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header navbar-brand">
+        <span><img src="assets/images/target_new.svg" style="height: 100%;" /></span>
+        <strong>dart</strong>chat
+      </div>
+      <div class="pull-right">
+        <img id="user-pic" src="assets/images/profile_placeholder.png" class="img-rounded" />
+        <span id="user-name" class="hidden-xs">Rodrigo Oliveira</span>
+        <button id="sign-out" type="button" class="btn btn-danger navbar-btn btn-sm">
+          Sign-out
+          <span class="glyphicon glyphicon-log-out"></span>
+        </button>
+      </div>
+      <!--<button type="button" class="btn btn-primary navbar-btn pull-right btn-sm">
+        Sign-in with Google
+        <span class="glyphicon glyphicon-log-in"></span>
+      </button>-->
+    </div>
+  </nav>
+  <div id="msgs-pane" class="container">
+    <div class="row msg-list">
+      <div class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img src="assets/images/profile_placeholder.png" class="img-rounded msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">Rodrigo Oliveira</span></div>
+        <div class="col-xs-11">
+          <p>Integer sagittis luctus augue, sit amet mollis tellus placerat ut. Nulla porttitor ligula leo, eu dictum enim tempor sit amet. Curabitur non elementum tortor. Nunc vitae ante non elit consectetur auctor. Nullam mauris nulla, pretium eu dui non, rutrum gravida ipsum. Praesent ultricies fringilla tortor sit amet commodo. Morbi porta leo nec nisl mattis aliquam. Pellentesque vitae dignissim eros. Donec tempus rhoncus lorem sed luctus. Cras bibendum rutrum efficitur. Phasellus egestas risus et posuere accumsan.</p>
+        </div>
+      </div>
+      <div class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img src="assets/images/profile_placeholder.png" class="img-rounded msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">Rodrigo Oliveira</span></div>
+        <div class="col-xs-11">
+          <p>Integer sagittis luctus augue, sit amet mollis tellus placerat ut. Nulla porttitor ligula leo, eu dictum enim tempor sit amet. Curabitur non elementum tortor. Nunc vitae ante non elit consectetur auctor. Nullam mauris nulla, pretium eu dui non, rutrum gravida ipsum. Praesent ultricies fringilla tortor sit amet commodo. Morbi porta leo nec nisl mattis aliquam. Pellentesque vitae dignissim eros. Donec tempus rhoncus lorem sed luctus. Cras bibendum rutrum efficitur. Phasellus egestas risus et posuere accumsan.</p>
+        </div>
+      </div>
+      <div class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img src="assets/images/profile_placeholder.png" class="img-rounded msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">Rodrigo Oliveira</span></div>
+        <div class="col-xs-11">
+          <p>Integer sagittis luctus augue, sit amet mollis tellus placerat ut. Nulla porttitor ligula leo, eu dictum enim tempor sit amet. Curabitur non elementum tortor. Nunc vitae ante non elit consectetur auctor. Nullam mauris nulla, pretium eu dui non, rutrum gravida ipsum. Praesent ultricies fringilla tortor sit amet commodo. Morbi porta leo nec nisl mattis aliquam. Pellentesque vitae dignissim eros. Donec tempus rhoncus lorem sed luctus. Cras bibendum rutrum efficitur. Phasellus egestas risus et posuere accumsan.</p>
+        </div>
+      </div>
+      <div class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img src="assets/images/profile_placeholder.png" class="img-rounded msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">Rodrigo Oliveira</span></div>
+        <div class="col-xs-11">
+          <p><img class="msg-image" src="http://i.memeful.com/media/post/kRp6z2w_700wa_0.gif" /></p>
+        </div>
+      </div>
+      <div class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img src="assets/images/profile_placeholder.png" class="img-rounded msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">Rodrigo Oliveira</span></div>
+        <div class="col-xs-11">
+          <p>Integer sagittis luctus augue, sit amet mollis tellus placerat ut. Nulla porttitor ligula leo, eu dictum enim tempor sit amet. Curabitur non elementum tortor. Nunc vitae ante non elit consectetur auctor. Nullam mauris nulla, pretium eu dui non, rutrum gravida ipsum. Praesent ultricies fringilla tortor sit amet commodo. Morbi porta leo nec nisl mattis aliquam. Pellentesque vitae dignissim eros. Donec tempus rhoncus lorem sed luctus. Cras bibendum rutrum efficitur. Phasellus egestas risus et posuere accumsan.</p>
+        </div>
+      </div>
+      <div class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img src="assets/images/profile_placeholder.png" class="img-rounded msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">Rodrigo Oliveira</span></div>
+        <div class="col-xs-11">
+          <p>Integer sagittis luctus augue, sit amet mollis tellus placerat ut. Nulla porttitor ligula leo, eu dictum enim tempor sit amet. Curabitur non elementum tortor. Nunc vitae ante non elit consectetur auctor. Nullam mauris nulla, pretium eu dui non, rutrum gravida ipsum. Praesent ultricies fringilla tortor sit amet commodo. Morbi porta leo nec nisl mattis aliquam. Pellentesque vitae dignissim eros. Donec tempus rhoncus lorem sed luctus. Cras bibendum rutrum efficitur. Phasellus egestas risus et posuere accumsan.</p>
+        </div>
+      </div>
+      <div class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img src="assets/images/profile_placeholder.png" class="img-rounded msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">Rodrigo Oliveira</span></div>
+        <div class="col-xs-11">
+          <p>Integer sagittis luctus augue, sit amet mollis tellus placerat ut. Nulla porttitor ligula leo, eu dictum enim tempor sit amet. Curabitur non elementum tortor. Nunc vitae ante non elit consectetur auctor. Nullam mauris nulla, pretium eu dui non, rutrum gravida ipsum. Praesent ultricies fringilla tortor sit amet commodo. Morbi porta leo nec nisl mattis aliquam. Pellentesque vitae dignissim eros. Donec tempus rhoncus lorem sed luctus. Cras bibendum rutrum efficitur. Phasellus egestas risus et posuere accumsan.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="progress" class="row">
+      <div></div>
+    </div>
+
+    <div id="msgs-form" class="row">
+      <form>
+        <div class="form-group col-xs-12 msgs-form">
+          <textarea class="text-input form-control" rows="1" placeholder="Send a message..."></textarea>
+          <div class="btn-group pull-right">
+            <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-send"></span></button>
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-picture"></span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Firebase JS SDK-->
+  <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+  <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAkL7QULlbssXj30U1f61kqsRn9LFcc0zk",
+    authDomain: "dartchat-1636a.firebaseapp.com",
+    databaseURL: "https://dartchat-1636a.firebaseio.com",
+    storageBucket: "dartchat-1636a.appspot.com"
+  };
+  firebase.initializeApp(config);
+  </script>
+</body>
+</html>

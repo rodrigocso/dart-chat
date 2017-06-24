@@ -1,0 +1,54 @@
+﻿<div #channelSelector id="channel-selector" class="container channel" hidden>
+  <div class="dropdown">
+    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+      {{ currentChannel }}
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu">
+      <li><a href="#" (click)="displayChannelCreator(channelSelector, channelCreator)">Create a channel</a></li>
+      <li class="divider"></li>
+      <template ngFor let-channel [ngForOf]="channels" >
+        <li [class.disabled]="channel === currentChannel"><a href="#" (click)="channel !== currentChannel && changeChannel(channel)">{{ channel }}</a></li>
+      </template>
+    </ul>
+  </div>
+</div>
+
+<div #channelCreator id="channel-creator" class="container channel" hidden>
+  <div class="input-group input-group">
+    <input #channelInput type="text" class="form-control" placeholder="Channel's name" />
+    <span class="input-group-btn">
+      <button class="btn btn-default" type="button" (click)="createChannel(channelSelector, channelCreator, channelInput)">
+        <span class="glyphicon glyphicon-ok"></span>
+      </button>
+      <button class="btn btn-default" type="button" (click)="displayChannelSelector(channelSelector, channelCreator, channelInput)">
+        <span class="glyphicon glyphicon-remove"></span>
+      </button>
+    </span>
+  </div>
+</div>
+
+<div id="msgs-pane" class="container">
+  <div id="messages" class="row msg-list" dcAutoScroll>
+    <div *ngFor="let msg of msgs; let last = last">
+      <div [attr.id]="msg.key" class="msg col-xs-12">
+        <div class="col-xs-1" style="padding:0;">
+          <img [src]="sanitizeUrl(msg.photoUrl)" class="img-circle msg-user-pic" />
+        </div>
+        <div class="col-xs-11"><span class="label label-default">{{ msg.name }}</span></div>
+        <div class="user-msg col-xs-11">{{ msg.text }}<img *ngIf="msg.imageUrl" class="msg-image" src="https://www.google.com/images/spin-32.gif" /></div>
+        <span *ngIf="last">{{ setMsgsLoaded() }}</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="progress" class="row">
+    <div></div>
+  </div>
+
+</div>
+
+<div class="container pull-left">
+  <dart-send-msg></dart-send-msg>
+</div>
+

@@ -1,0 +1,4 @@
+﻿<button (click)="sendImage($event)" [disabled]="!user" class="btn btn-default" type="button">
+  <span class="glyphicon glyphicon-picture"></span>
+</button>
+<input id="mediaCapture" class="hidden" (change)="onChange($event)" type="file" accept="image/*,capture=camera" />
